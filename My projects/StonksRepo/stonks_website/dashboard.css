@@ -1,0 +1,85 @@
+body {
+    margin: 1%;
+    margin-right: 2%;
+    filter: brightness(140%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #30303A;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 5%;
+    padding: 2px;
+    align-items: center;
+    background-color: rgba(4, 11, 46, 0.137);
+}
+
+hr {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+h1 {
+    margin: 2%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    /* background-color: #ddd; */
+    text-decoration: underline;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    width: 80%;
+    border-collapse: collapse;
+    border-style: solid;
+    font-size: large;
+}
+
+table tr:hover {
+    background-color: grey;
+}
+
+#transactionHistory {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#transactionHistory td,
+#transactionHistorys th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#transactionHistory tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#transactionHistory tr:hover {
+    background-color: grey;
+}
+
+#transactionHistory th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: green;
+    color: white;
+}

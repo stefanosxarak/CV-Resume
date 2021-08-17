@@ -1,82 +1,113 @@
-import tkinter as tk
-window = tk.Tk()
+# import tkinter as tk
+# window = tk.Tk()
 
-label = tk.Label(
-    text="Battleship!",
-    foreground="white",  # Set the text color to white
-    background="black"  # Set the background color to black
-)
-label.pack()
+# label = tk.Label(
+#     text="Battleship!",
+#     foreground="white",  # Set the text color to white
+#     background="black"  # Set the background color to black
+# )
+# label.pack()
 
-label = tk.Label(text="Player 1 name:")
-entry = tk.Entry()
-name1 = entry.get()
-label.pack()
-entry.pack()
+# label = tk.Label(text="Player 1 name:")
+# entry = tk.Entry()
+# name1 = entry.get()
+# label.pack()
+# entry.pack()
 
-label = tk.Label(text="Player 2 name:")
-entry = tk.Entry()
-name2 = entry.get()
+# label = tk.Label(text="Player 2 name:")
+# entry = tk.Entry()
+# name2 = entry.get()
 
-label.pack()
-entry.pack()
+# label.pack()
+# entry.pack()
 
 
-# Assume that this list gets updated automatically
-events_list = []
+# # Assume that this list gets updated automatically
+# events_list = []
 
-# Create an event handler
-def handle_keypress(event):
-    """Print the character associated to the key pressed"""
-    print(event.char)
+# # Create an event handler
+# def handle_keypress(event):
+#     """Print the character associated to the key pressed"""
+#     print(event.char)
 
-# Bind keypress event to handle_keypress()
-window.bind("<Key>", handle_keypress)
+# # Bind keypress event to handle_keypress()
+# window.bind("<Key>", handle_keypress)
 
+
+ships_dict = {
+            "aircarft carrier": 5,
+            "battleship": 4,
+            "submarine": 3,
+            "destroyer": 3,
+            "patrol ship": 2
+}
+
+def print_board(board):
+    for row in board:
+        print (" ".join(row))
+    print_board(board)
+
+def ask_ship_position(player,ship):
+    if player == name1:
+        print("From")
+        ship1_start_row = int(input("Row: "))
+        ship1_start_col = int(input("Col: "))
+        print("To")
+        ship1_end_row = int(input("Row: "))
+        ship1_end_col = int(input("Col: "))
+    else:
+        print("From")
+        ship2_start_row = int(input("Row: "))
+        ship2_start_col = int(input("Col: "))
+        print("To")
+        ship2_end_row = int(input("Row: "))
+        ship2_end_col = int(input("Col: "))
+
+name1 = "stefanos"
+name2 = "zina"
 
 def battleship():
     board1 = []
     for x in range(0, 10):
         board1.append(["O"] * 10)
-
-    def print_board(board1):
-        for row in board1:
-            print (" ".join(row))
         print_board(board1)
 
     board2 = []
     for x in range(0, 10):
         board2.append(["O"] * 10)
-
-    def print_board(board2):
-        for row in board2:
-            print (" ".join(row))
         print_board(board2)
+
     playagain = "yes"
     while playagain == "yes":
         turn = "player1"
 
-        label = tk.Label(text="Player 1 set your ship")
-        entry = tk.Entry()
-        ship1_row = entry.get()
-        ship1_col = entry.get()
-        label.pack()
-        entry.pack()
+        # label = tk.Label(text="Player 1 set your ship")
+        # entry = tk.Entry()
+        # ship1_row = entry.get()
+        # ship1_col = entry.get()
+        # label.pack()
+        # entry.pack()
 
-        print(name1, " set your ship")
-        ship1_row = int(input("Row: "))
-        ship1_col = int(input("Col: "))
+        for i in len(ships_dict):
+            print(name1, " set your ", ships_dict[i])
+            ask_ship_position(name1,)
+            print("From")
+            ship11_row = int(input("Row: "))
+            ship11_col = int(input("Col: "))
+            print("To")
 
-        label = tk.Label(text="Player 2 set your ship")
-        entry = tk.Entry()
-        ship2_row = entry.get()
-        ship2_col = entry.get()
-        label.pack()
-        entry.pack()
+        ask_ship_position(name2,)
+      
+        # label = tk.Label(text="Player 2 set your ship")
+        # entry = tk.Entry()
+        # ship2_row = entry.get()
+        # ship2_col = entry.get()
+        # label.pack()
+        # entry.pack()
 
-        print(name2, " set your ship")
-        ship2_row = int(input("Row: "))
-        ship2_col = int(input("Col: "))
+        # print(name2, " set your ship")
+        # ship2_row = int(input("Row: "))
+        # ship2_col = int(input("Col: "))
 
         for over in range(10^x):
             if turn == "player1":
@@ -123,17 +154,17 @@ def battleship():
         playagain = input()
 
 
-button = tk.Button(
-    text="Start",
-    width=25,
-    height=5,
-    border=5,
-    bg="blue",
-    fg="yellow",
-    command=battleship
-)
-button.pack()
-window.mainloop()
+# button = tk.Button(
+#     text="Start",
+#     width=25,
+#     height=5,
+#     border=5,
+#     bg="blue",
+#     fg="yellow",
+#     command=battleship
+# )
+# button.pack()
+# window.mainloop()
 
 
 # Make multiple battleships: you’ll need to be careful because you need to make sure that you don’t place battleships on top of each other on the game board. You’ll also want to make sure that you balance the size of the board with the number of ships so the game is still challenging and fun to play.

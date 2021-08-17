@@ -2,6 +2,7 @@ import numpy as np
 
 # np.conv does NOT normalise and leaves it to the user
 # IMPORTANT: this program outputs ONLY 1D arrays
+# Enter 2 arrays and find the convolution
 
 A = []
 a = int(input("Size of array:"))

@@ -1,5 +1,7 @@
 import numpy as np
 
+#Enter 2 arrays and produce the weighted mean
+
 xs = []
 a = int(input("Size of array X:"))
 for i in range(a):

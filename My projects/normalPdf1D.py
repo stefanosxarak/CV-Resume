@@ -4,8 +4,9 @@ import numpy as np
 # v is the variance
 # s is the standard deviation
 
-# One-dimensional Gaussian/Normal probability density function:
+# One-dimensional Gaussian/Normal probability density function
 # IMPORTANT: this program is NOT for multi-dimensional Normal pdf
+# Enter 2 arrays "a" and "b" if there is a second class, otherwise only "a"
 
 xs = []
 a = int(input("Size of array:"))

@@ -1,6 +1,7 @@
 import numpy as np
 
 #This is K means for 2 cluster centers
+#Enter 2 cluster centers and 2 arrays
 
 cc1 = float(input("Cluster Center 1:"))
 cc2 = float(input("Cluster Center 2:"))
